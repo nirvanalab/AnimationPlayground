@@ -2,7 +2,6 @@
 
 import Foundation
 import UIKit
-import XCPlayground
 import PlaygroundSupport
 
 //: [Next](@next)
@@ -37,20 +36,19 @@ submitBtn.center = containerView.center
 submitBtn.setTitle("Submit", for: .normal)
 submitBtn.titleLabel?.textColor = UIColor.black
 submitBtn.layer.cornerRadius = 5.0
-submitBtn.layer
 submitBtn.backgroundColor = UIColor.green
 containerView.addSubview(submitBtn)
 
 let animationDuration = 1.0
 
 // Offset elements out of the view so that we can animate it later
-//heading.center.x -= containerView.bounds.width
-//username.center.x -= containerView.bounds.width
-//password.center.x -= containerView.bounds.width
+heading.center.x -= containerView.bounds.width
+username.center.x -= containerView.bounds.width
+password.center.x -= containerView.bounds.width
 
 /*:
-## Simple animation with duration and completion closure
-*/
+ ## Simple animation with duration and completion closure
+ */
 
 //UIView.animate(withDuration: animationDuration) {
 //    heading.center.x += containerView.bounds.width
@@ -59,9 +57,9 @@ let animationDuration = 1.0
 //}
 
 /*:
-## Animate elements independent of each other
+ ## Animate elements independent of each other
  - delay - Amount of seconds UIKit will wait before it starts animation
-*/
+ */
 
 //UIView.animate(withDuration: animationDuration, delay: 0.3, options: [], animations: {
 //    heading.center.x += containerView.bounds.width
@@ -73,15 +71,14 @@ let animationDuration = 1.0
 //    password.center.x += containerView.bounds.width
 //}, completion: nil)
 
-
-/*: 
-## Animate with repeat , auto reverse option
-- repeat - Animation loops forever
-- autoreverse - Used in conjuction with repeat. repeats the animation forward and then backward
-- curveEaseIn - Acceleration at start of animation
-- curveEaseOut - Deceleration at end of animation
-- curveEaseInOut - Acceleration at start and Deceleration at end of animation
-*/
+/*:
+ ## Animate with repeat , auto reverse option
+ - repeat - Animation loops forever
+ - autoreverse - Used in conjuction with repeat. repeats the animation forward and then backward
+ - curveEaseIn - Acceleration at start of animation
+ - curveEaseOut - Deceleration at end of animation
+ - curveEaseInOut - Acceleration at start and Deceleration at end of animation
+ */
 //UIView.animate(withDuration: animationDuration, delay: 0.3, options: [.repeat], animations: {
 //    heading.center.x += containerView.bounds.width
 //}, completion: nil)
@@ -92,13 +89,12 @@ let animationDuration = 1.0
 //    password.center.x += containerView.bounds.width
 //}, completion: nil)
 
-
 /*:
-## Spring Effect
+ ## Spring Effect
  
-- usingSpringWithDamping : This parameter accepts values between 0.0 and 1.0. Values closer to 0.0 create a bouncier animation, while values closer to 1.0 create a stiff-looking effect.
-- initialSpringVelocity : Controls the initial velocity of the animation.
-*/
+ - usingSpringWithDamping : This parameter accepts values between 0.0 and 1.0. Values closer to 0.0 create a bouncier animation, while values closer to 1.0 create a stiff-looking effect.
+ - initialSpringVelocity : Controls the initial velocity of the animation.
+ */
 
 // Uncomment the animate elements independent
 
@@ -107,12 +103,7 @@ let animationDuration = 1.0
 //submitBtn.alpha = 0
 //
 //UIView.animate(withDuration: animationDuration, delay: 1.5,usingSpringWithDamping: 0.4, initialSpringVelocity:1, options: [], animations: {
-//        submitBtn.center.y -= 100
-//        submitBtn.alpha = 1
+//    submitBtn.center.y -= 100
+//    submitBtn.alpha = 1
 //}, completion: nil)
-
-
-
-
-
 

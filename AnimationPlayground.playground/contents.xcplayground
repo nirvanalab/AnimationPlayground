@@ -4,6 +4,10 @@
         <page name='Login Page'/>
         <page name='Touch Animations'/>
         <page name='Transformations'/>
+        <page name='KeyframeAnimation'/>
+        <page name='FramesAndBounds'/>
+        <page name='Spring Animation'/>
         <page name='Gestures'/>
+        <page name='Layer Animation'/>
     </pages>
 </playground>

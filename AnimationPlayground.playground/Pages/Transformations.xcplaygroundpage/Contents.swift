@@ -42,30 +42,17 @@ containerView.addSubview(rectangle2)
 let square = UIView(frame: CGRect(x: 20, y: 20, width: 50, height: 50));
 square.backgroundColor = UIColor.red
 containerView.addSubview(square)
-//UIView.animate(withDuration: duration) {
-//    square.frame = CGRect(x: 300, y: 20, width: 70, height: 70)
-//}
 
-//UIView.animate(withDuration: duration) {
-//    
-//    let targetColor = UIColor.purple
-//    circle.backgroundColor = targetColor
-//    
-//    let scaleTransform = CGAffineTransform.init(scaleX: 3, y: 3)
-//    circle.transform = scaleTransform
-//    
-//    let rotationTransform = CGAffineTransform.init(rotationAngle: 3.14)
-//    rectangle.transform = rotationTransform
-//    
-//    let leftRotationTransform = CGAffineTransform.init(rotationAngle: -3.14)
-//    rectangle2.transform = leftRotationTransform
-//    
-//    
-//    
-//}
+//: Simple rotation transformation
+UIView.animate(withDuration: duration, delay: 0, options: [.repeat], animations: {
+    square.center.x = 350;
+    let rotationTransform = CGAffineTransform.init(rotationAngle: 3.14)
+    square.transform = rotationTransform
+},completion:nil)
 
+//: Scale Transform, Rotation Transform , Background color
 UIView.animate(withDuration: duration, delay: 0, options: [.repeat,.autoreverse], animations: {
-   
+    
     let targetColor = UIColor.purple
     circle.backgroundColor = targetColor
     
@@ -79,21 +66,5 @@ UIView.animate(withDuration: duration, delay: 0, options: [.repeat,.autoreverse]
     rectangle2.transform = leftRotationTransform
     
 }, completion: nil)
-
-
-//TODO apply two transforms at the same time?
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

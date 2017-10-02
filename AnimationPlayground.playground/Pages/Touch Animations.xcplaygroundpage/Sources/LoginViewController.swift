@@ -60,7 +60,6 @@ public class LoginViewController: UIViewController {
             0.2, initialSpringVelocity: 0.0, options: [], animations: {
                 self.submitBtn?.bounds.size.width += 80.0
                 self.submitBtn?.center.y += 60
-//                self.status.center.x += self.view.bounds.width
         }) { _ in
             
             UIView.animate(withDuration: 0.5, animations: {
